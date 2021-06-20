@@ -24,3 +24,12 @@ def get_pets_by_breed(breeds_in_stock, breed):
         if pet ["breed"] == breed:
             breed_count.append(breed)
     return breed_count
+
+def find_pet_by_name( pet_shop_stock, name):
+    pets_list= pet_shop_stock["pets"]
+    matches = None
+    for pet in pets_list:
+        if pet["name"] == name:
+            matches = pet
+    return matches   
+
