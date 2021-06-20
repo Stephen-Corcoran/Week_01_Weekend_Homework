@@ -25,7 +25,7 @@ def get_pets_by_breed(breeds_in_stock, breed):
             breed_count.append(breed)
     return breed_count
 
-def find_pet_by_name( pet_shop_stock, name):
+def find_pet_by_name(pet_shop_stock, name):
     pets_list= pet_shop_stock["pets"]
     matches = None
     for pet in pets_list:
@@ -39,4 +39,7 @@ def remove_pet_by_name(pet_shop_stock, name):
         if pet["name"] == name:
             pet_name_to_be_removed = pet_shop_stock["pets"].index(pet)
 
-    pet_shop_stock["pets"].pop(pet_name_to_be_removed)  
+    pet_shop_stock["pets"].pop(pet_name_to_be_removed)
+
+def add_pet_to_stock(pet_shop, new_pet):
+    pet_shop["pets"].append(new_pet)
