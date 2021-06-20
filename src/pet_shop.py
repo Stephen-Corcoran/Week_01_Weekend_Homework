@@ -33,3 +33,10 @@ def find_pet_by_name( pet_shop_stock, name):
             matches = pet
     return matches   
 
+def remove_pet_by_name(pet_shop_stock, name):
+    pet_name_to_be_removed = []
+    for pet in pet_shop_stock["pets"]:
+        if pet["name"] == name:
+            pet_name_to_be_removed = pet_shop_stock["pets"].index(pet)
+
+    pet_shop_stock["pets"].pop(pet_name_to_be_removed)  
