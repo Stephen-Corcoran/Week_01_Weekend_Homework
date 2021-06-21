@@ -57,4 +57,4 @@ def add_pet_to_customer(customer, pets):
         customer ["pets"].append("pets")
 
 def customer_can_afford_pet(customer, pets):
-     return customer["cash"] > pets ["price"]
+     return customer["cash"] >= pets ["price"]
